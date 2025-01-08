@@ -5,20 +5,20 @@ export default function useResponsiveSlides() {
 
     const updateSlidesPerView = () => {
         if (window.innerWidth >= 1024) {
-            setSlidePreview(3); // Large screens
+            setSlidePreview(3); 
         } else if (window.innerWidth >= 640) {
-            setSlidePreview(2); // Medium screens
+            setSlidePreview(2);
         } else {
-            setSlidePreview(1); // Small screens
+            setSlidePreview(1); 
         }
     };
 
     useEffect(() => {
-        updateSlidesPerView(); // Set initial value
-        window.addEventListener('resize', updateSlidesPerView); // Update on resize
+        updateSlidesPerView(); 
+        window.addEventListener('resize', updateSlidesPerView);
 
-        return () => window.removeEventListener('resize', updateSlidesPerView); // Cleanup
+        return () => window.removeEventListener('resize', updateSlidesPerView); 
     }, []);
 
-    return slidePreview; // Return the current slides per view
+    return slidePreview; 
 }

@@ -58,13 +58,13 @@ export default function EventeCardre() {
    return (
        <>
            <div className="">
-               <div className="relative w-full">
+               <div className="relative w-full my-12 px-12">
                    <div className="">
                        <h1>Événements à venir</h1>
                    </div>
-                   <div className="flex gap-3 relative w-full">
-                       <button className="swiper-button-prev  absolute bottom-0 eft-[133rem]  "></button>
-                       <button className="swiper-button-next "></button>
+                   <div className="flex gap-3 absolute -top-2  w-44 right-5 mb-24">
+                       <button className="swiper-button-prev bg-white   left-0  p-8 border shadow-2xl border-gray-200 rounded-full   "></button>
+                       <button className="swiper-button-next left-0  p-8 border shadow-2xl border-gray-200 rounded-full"></button>
                    </div>
                </div>
 
