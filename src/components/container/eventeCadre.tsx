@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper/modules";
 import useResponsiveSlides from "../../hooks/responsiveScreen";
+import Typo from "../ui/typo/typo";
 
 const EnventList = [
     {
@@ -57,12 +58,12 @@ export default function EventeCardre() {
     const slidesPerView = useResponsiveSlides();
    return (
        <>
-           <div className="">
+           <div className="pl-2 md:pl-24">
                <div className="relative w-full my-12 px-12">
                    <div className="">
-                       <h1>Événements à venir</h1>
+                      <Typo  variants="h2">Événements à venir</Typo>
                    </div>
-                   <div className="flex gap-3 absolute -top-2  w-44 right-5 mb-24">
+                   <div className=" hidden md:flex gap-3 absolute -top-2  w-44 right-5 mb-24">
                        <button className="swiper-button-prev bg-white   left-0  p-8 border shadow-2xl border-gray-200 rounded-full   "></button>
                        <button className="swiper-button-next left-0  p-8 border shadow-2xl border-gray-200 rounded-full"></button>
                    </div>

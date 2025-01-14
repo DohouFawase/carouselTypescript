@@ -1,20 +1,29 @@
 import { ProductInterface } from "../../../utils/interface"
 import Button from "../button/button"
+import Typo from "../typo/typo"
+import GeneralCard from "./container"
 
-export default function ProductCard({ title = "ehey" , subtitle , description , imgUrl }: ProductInterface) {
+export default function ProductCard({ title  , subtitle , description , imgUrl }: ProductInterface) {
 
     return (
         <>
-            <div className="overflow-hidden rounded-lg shadow-md">
-                <div className="">
+        <GeneralCard variants="large" backgroud="light">
+
+        <div className="">
                     <img src={imgUrl} alt="" />
                 </div>
                 <div className="space-y-3 px-4 py-4">
-                    <p className="text-[#192740] text-[20px] font-bold ">{title}</p>
-                    <p className="text-sm"> {subtitle}</p>
-                    <p className="text-[#FF7A21]">{description}</p>
+                    <Typo variants="h3">
+                    {title}
+                    </Typo>
+                   
+                    <Typo components="p"> {subtitle}</Typo>
+                    
+
+                    <Typo variants="body-lg">{description}</Typo>
                 </div>
-            </div>
+        </GeneralCard>
+           
 
         </>
     )
